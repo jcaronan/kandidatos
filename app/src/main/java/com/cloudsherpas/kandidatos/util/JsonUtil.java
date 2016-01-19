@@ -29,7 +29,6 @@ public class JsonUtil {
             jsonAccom.put("legislationSector", candidate.getAccomplishment().getLegislationSector());
             jsonAccom.put("environmentSector", candidate.getAccomplishment().getEnvironmentSector());
             jsonAccom.put("leadershipSector", candidate.getAccomplishment().getLeadershipSector());
-            jsonAccom.put("awards", candidate.getAccomplishment().getAwards());
 
             // We add the object to the main object
             jsonObj.put("bio", jsonBio);

@@ -20,7 +20,6 @@ public class Accomplishment {
         this.legislationSector = legislationSector;
         this.environmentSector = environmentSector;
         this.leadershipSector = leadershipSector;
-        this.awards  = awards;
     }
 
     public ArrayList<String> getEducationSector() {
@@ -63,11 +62,4 @@ public class Accomplishment {
         this.leadershipSector = leadershipSector;
     }
 
-    public ArrayList<String> getAwards() {
-        return awards;
-    }
-
-    public void setAwards(ArrayList<String> awards) {
-        this.awards = awards;
-    }
 }
