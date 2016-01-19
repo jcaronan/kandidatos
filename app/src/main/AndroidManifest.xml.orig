@@ -16,13 +16,15 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< Updated upstream
             android:name=".profile.CandidateProfileActivity"
             android:label="@string/title_activity_candidate_profile" >
         </activity>
-        <activity
+=======
             android:name=".bio.BiographyActivity"
             android:label="@string/title_activity_biography"
             android:theme="@style/AppTheme.NoActionBar" />
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
