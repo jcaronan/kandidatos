@@ -6,60 +6,87 @@ import java.util.ArrayList;
  * Created by jcaronan on 1/19/16.
  */
 public class Accomplishment {
-    private ArrayList<String> educationSector;
-    private ArrayList<String> agricultureSector;
-    private ArrayList<String> legislationSector;
-    private ArrayList<String> environmentSector;
-    private ArrayList<String> leadershipSector;
-    private ArrayList<String> awards;
+    private String education;
+    private String agriculture;
+    private String security;
+    private String trade;
+    private String foreignAffairs;
+    private String health;
+    private String labor;
+    private String transportation;
 
-    public Accomplishment(ArrayList<String> educationSector, ArrayList<String> agricultureSector, ArrayList<String> legislationSector,
-                          ArrayList<String> environmentSector, ArrayList<String> leadershipSector, ArrayList<String> awards) {
-        this.educationSector = educationSector;
-        this.agricultureSector = agricultureSector;
-        this.legislationSector = legislationSector;
-        this.environmentSector = environmentSector;
-        this.leadershipSector = leadershipSector;
+    public Accomplishment(String education, String agriculture, String security, String trade, String foreignAffairs, String health, String labor, String transportation) {
+        this.education = education;
+        this.agriculture = agriculture;
+        this.security = security;
+        this.trade = trade;
+        this.foreignAffairs = foreignAffairs;
+        this.health = health;
+        this.labor = labor;
+        this.transportation = transportation;
     }
 
-    public ArrayList<String> getEducationSector() {
-        return educationSector;
+    public String getEducation() {
+        return education;
     }
 
-    public void setEducationSector(ArrayList<String> educationSector) {
-        this.educationSector = educationSector;
+    public void setEducation(String education) {
+        this.education = education;
     }
 
-    public ArrayList<String> getAgricultureSector() {
-        return agricultureSector;
+    public String getAgriculture() {
+        return agriculture;
     }
 
-    public void setAgricultureSector(ArrayList<String> agricultureSector) {
-        this.agricultureSector = agricultureSector;
+    public void setAgriculture(String agriculture) {
+        this.agriculture = agriculture;
     }
 
-    public ArrayList<String> getLegislationSector() {
-        return legislationSector;
+    public String getSecurity() {
+        return security;
     }
 
-    public void setLegislationSector(ArrayList<String> legislationSector) {
-        this.legislationSector = legislationSector;
+    public void setSecurity(String security) {
+        this.security = security;
     }
 
-    public ArrayList<String> getEnvironmentSector() {
-        return environmentSector;
+    public String getTrade() {
+        return trade;
     }
 
-    public void setEnvironmentSector(ArrayList<String> environmentSector) {
-        this.environmentSector = environmentSector;
+    public void setTrade(String trade) {
+        this.trade = trade;
     }
 
-    public ArrayList<String> getLeadershipSector() {
-        return leadershipSector;
+    public String getForeignAffairs() {
+        return foreignAffairs;
     }
 
-    public void setLeadershipSector(ArrayList<String> leadershipSector) {
-        this.leadershipSector = leadershipSector;
+    public void setForeignAffairs(String foreignAffairs) {
+        this.foreignAffairs = foreignAffairs;
     }
 
+    public String getHealth() {
+        return health;
+    }
+
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public String getLabor() {
+        return labor;
+    }
+
+    public void setLabor(String labor) {
+        this.labor = labor;
+    }
+
+    public String getTransportation() {
+        return transportation;
+    }
+
+    public void setTransportation(String transportation) {
+        this.transportation = transportation;
+    }
 }

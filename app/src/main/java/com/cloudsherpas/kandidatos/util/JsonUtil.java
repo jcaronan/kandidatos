@@ -14,7 +14,8 @@ public class JsonUtil {
 
             JSONObject jsonObj = new JSONObject();
             jsonObj.put("candidateId", candidate.getCandidateId());
-            // Here we convert Java Object to JSON
+            jsonObj.put("portrait", candidate.getPortrait());
+
             JSONObject jsonBio = new JSONObject();
             jsonBio.put("politicalName", candidate.getBio().getPoliticalName()); // Set the first name/pair
             jsonBio.put("firstname", candidate.getBio().getFirstname()); // Set the first name/pair
@@ -24,15 +25,25 @@ public class JsonUtil {
             jsonBio.put("campaignSlogan", candidate.getBio().getCampaignSlogan());
 
             JSONObject jsonAccom = new JSONObject(); // we need another object to store the address
-            jsonAccom.put("educationSector", candidate.getAccomplishment().getEducationSector());
-            jsonAccom.put("agricultureSector", candidate.getAccomplishment().getAgricultureSector());
-            jsonAccom.put("legislationSector", candidate.getAccomplishment().getLegislationSector());
-            jsonAccom.put("environmentSector", candidate.getAccomplishment().getEnvironmentSector());
-            jsonAccom.put("leadershipSector", candidate.getAccomplishment().getLeadershipSector());
+            jsonAccom.put("education", candidate.getAccomplishment().getEducation());
+            jsonAccom.put("agriculture", candidate.getAccomplishment().getAgriculture());
+            jsonAccom.put("security", candidate.getAccomplishment().getSecurity());
+            jsonAccom.put("trade", candidate.getAccomplishment().getTrade());
+            jsonAccom.put("foreignAffairs", candidate.getAccomplishment().getForeignAffairs());
+            jsonAccom.put("health", candidate.getAccomplishment().getHealth());
+            jsonAccom.put("labor", candidate.getAccomplishment().getLabor());
+            jsonAccom.put("transportation", candidate.getAccomplishment().getTransportation());
+
+            JSONObject jsonCredential = new JSONObject();
+            jsonCredential.put("school", candidate.getCredential().getSchool());
+            jsonCredential.put("positions", candidate.getCredential().getPositions());
+            jsonCredential.put("bills", candidate.getCredential().getBills());
+            jsonCredential.put("awards", candidate.getCredential().getAwards());
 
             // We add the object to the main object
             jsonObj.put("bio", jsonBio);
             jsonObj.put("accomplishment", jsonAccom);
+            jsonObj.put("credential", jsonCredential);
 
             return jsonObj.toString();
 
