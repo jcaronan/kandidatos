@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.cloudsherpas.kandidatos.R;
 import com.cloudsherpas.kandidatos.profile.CandidateProfileActivity;
@@ -81,9 +82,15 @@ public class CandidateListActivity extends AppCompatActivity {
                 grid = (View)convertView;
             }
 
+            Candidate c = candidates[position];
+            String uri = "@drawable/" + c.getPortrait(); //should have no extension
+            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+
             ImageView imageView = (ImageView)grid.findViewById(R.id.candidateListImage);
-            imageView.setImageResource(R.mipmap.ic_launcher);
-            //imageView.setImageResource(candidates[position].getPortrait());
+            imageView.setImageResource(imageResource);
+
+            TextView textView = (TextView)grid.findViewById(R.id.itemText);
+            textView.setText(c.getBio().getLastname());
 
             return grid;
         }
