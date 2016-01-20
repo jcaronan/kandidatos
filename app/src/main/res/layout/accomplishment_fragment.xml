@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Focused Areas"
+            android:background="#ffffff"
+            android:id="@+id/chartLabel"
+            android:padding="5dp"
+            />
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/profileChart"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="#ffffff"
+            android:layout_below="@id/chartLabel"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Education"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Agriculture"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="National Security"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"/>
+    </LinearLayout>
+</LinearLayout>

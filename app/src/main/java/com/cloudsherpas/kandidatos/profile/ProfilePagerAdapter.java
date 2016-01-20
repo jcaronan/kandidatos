@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.cloudsherpas.kandidatos.accomplishment.AccomplishmentFragment;
 import com.cloudsherpas.kandidatos.bio.BiographyFragment;
 
 /**
@@ -23,6 +24,9 @@ public class ProfilePagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 BiographyFragment tab1 = new BiographyFragment();
                 return tab1;
+            case 1:
+                AccomplishmentFragment tab2 = new AccomplishmentFragment();
+                return tab2;
             default:
                 return null;
         }

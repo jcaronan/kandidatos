@@ -23,7 +23,6 @@ public class BiographyFragment extends Fragment {
         Candidate c = CandidateListDao.getById(candidateId);
         TextView textPoliticalname = (TextView) view.findViewById(R.id.textView2);
         textPoliticalname.setText(c.getBio().getPoliticalName());
-        Log.v("DAWI", c.getBio().getPoliticalName());
 
         TextView textCompleteName = (TextView) view.findViewById(R.id.textView3);
         textCompleteName.setText(c.getBio().getFirstname() + " " +
