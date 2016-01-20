@@ -64,22 +64,46 @@ public class CandidateListDao {
         candidates.add(new Candidate("3", "tile_santiago",
                 new Biography("Miriam Defensor-Santiago", "Miriam", "Defensor", "Santiago", "June 15, 1945", "People's Reform Party", "\"Stupid is not forever\"."),
                 new Accomplishment("",
-                        "","","","","", "", ""),
-                new Credential("","","","")
+                        "Improvement of the quality of primary and secondary education in the classroom.\n" +
+                                "Promotion of safety in schools and campuses.\n" +
+                                "Advancement of science and technology education.\n" +
+                                "Strengthening of the recruitment process of Filipino teachers.",
+                        "Miriam endorsed to Congress an alternative “people’s agrarian reform program” (Parcode) drafted by the Congress for People’s Agrarian Reform, a coalition of farmers’ groups including the militant Kilusang Magbubukid ng Pilipinas (KMP) and the conservative Federation of Free Farmers (FFF).  She said the Parcode was a “superior piece of legislation” and “rational, highly logical, and consistent.”  The Parcode put land retention limits to five hectares.  Under the CARL, the retention limit was 11 hectares, which virtually exempted 75% of all agricultural lands from land reform.  Miriam’s endorsement was hailed by farmers’ organizations.",
+                        "Strengthening of the criminal laws by providing for punishment of crimes committed through the use of modem technology.\n" +
+                                "Strengthening of the criminal laws by providing stiffer penalties for gambling.\n" +
+                                "Strengthening of the prohibition against entry of illegal drugs.\n" +
+                                "Regulation of use of firearms and motor vehicles.\n" +
+                                "Strengthening of the fight against terrorism.",
+                        "She served as chair of the foreign affairs committee of the Commission on Appointments." +
+                                "In June 2015, she submitted to the Supreme Court a draft resolution expressing \"a strong sense\" of the Senate that the military-to-military agreement between the Philippines and the US is \"invalid\" without the approval of the Senate.",
+                        "Promotion of health programs and health products in order to combat diseases like cancer, fertility, hepatitis C, dystonia and lead poisoning, by enacting and strengthening laws relating to anti-tobacco campaigns, reduction of metals in packaging, a national folic acid education program, research program regarding birth defects, health care cost reduction programs, poison prevention and control programs.",
+                        "Promotion of entrepreneurship by allowing disposal of unused public lands to deserving persons for use by them as collateral for bank loans.\n" +
+                                "Provision of more jobs to the unemployed population by helping small and medium sized entrepreneurs establish their businesses.",
+                        "Public Transport Preservation Bill  which seeks to amend Act No. 3815, also known as the Penal Code, and the Anti-Fencing of Government Property Bill, which will amend Presidential Decree No. 1612, also known as the Anti-Fencing Law."),
+                new Credential("University of the Philippines, University of Michigan,Xavier University, Centro Escolar University",
+                        "Judge of the International Criminal Court, Senator, Secretary Agrarian Reform, Commissioner of Immigration and Deportation, Presiding Judge RTC",
+                        "538 Bills and Resolutions passed (e.g. Reproductive Health Act of 2012, sin Tax Law, Climate Change Act of 2009, renewable Energy Act, Magna Carta of Women, etc.)",
+                        "Google Top 20 Most Influential Filipinas of 2010, “Order of Civil Merit,” Kingdom of Spain, Magsaysay Award for Government Service, 1988., TOYM Award for Law"  )
         ));
 
         candidates.add(new Candidate("4", "tile_duterte",
-                new Biography("Rodrigo Duterte", "Rodrigo", "", "Duterte", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
-                new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
-                        "","","","","", "", ""),
+                new Biography("Rodrigo \"The Punisher\" Duterte", "Rodrigo", "Roa", "Duterte", "March 28, 1945", "PDP-Laban", "\"Tapang at malasakit.\"."),
+                new Accomplishment("Davao City bagged the Department of Education’s Most Outstanding Local Government Unit in the National Literacy Awards, then copped the Most Culture-Friendly City in the Philippines in 2009.",
+                        "Fought rice smuggling in davao.",
+                        "Davao city is now world's 4th safest city.",
+                        "Encourage foreign investments.",
+                        "Davao City 911",
+                        "Fight against illegal drugs. ",
+                        "Put up TESDA centers within the city to address shortage of craftsmen. ",
+                        "Dismantled the illegal terminals put up by colorum vans in Davao city."),
                 new Credential("","","","")
         ));
 
         candidates.add(new Candidate("5", "tile_seneres",
-                new Biography("Roy Seneres", "Roy", "", "Seneres", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
-                new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
+                new Biography("Roy Seneres", "Roy", "", "Seneres", "July 6, 1947", "Partido ng Manggagawa at Magsasaka", "\"Isalba Mo Bayan ko.\""),
+                new Accomplishment("",
                         "","","","","", "", ""),
-                new Credential("","","","")
+                new Credential("","Chairman of National Labor Relations (2002-2005), Philippine Ambassadir to UAE (1994-1998)","","")
         ));
     }
 
