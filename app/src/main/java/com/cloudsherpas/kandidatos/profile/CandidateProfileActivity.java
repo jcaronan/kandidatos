@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cloudsherpas.kandidatos.R;
@@ -32,6 +34,9 @@ public class CandidateProfileActivity extends AppCompatActivity {
     private RadarChart mChart;
     private ImageView iView;
     private TextView tView;
+    private ListView listView;
+    ArrayAdapter<String> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +70,30 @@ public class CandidateProfileActivity extends AppCompatActivity {
         //Profile name
         tView = (TextView) findViewById(R.id.candidateProfileName);
         tView.setText(c.getBio().getFirstname()+ "\n" + c.getBio().getLastname());
+
+        listView = (ListView) findViewById(R.id.listView);
+
+        // Defined Array values to show in ListView
+        Accomplishment a = c.getAccomplishment();
+        ArrayList <String> values = new ArrayList<>();
+        values.add(a.getAgriculture());
+        values.add(a.getEducation());
+        values.add(a.getForeignAffairs());
+        values.add(a.getHealth());
+        values.add(a.getLabor());
+        values.add(a.getSecurity());
+        values.add(a.getTrade());
+        values.add(a.getTransportation());
+        adapter = new ArrayAdapter<String>(this,R.layout.credential_list,values.toArray(new String[values.size()]));
+        // Assign adapter to ListView
+        listView.setAdapter(adapter);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_candidate_profile, menu);
+
         return true;
     }
 
