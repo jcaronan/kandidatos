@@ -2,6 +2,7 @@ package com.cloudsherpas.kandidatos.bio;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,25 +36,37 @@ public class BiographyFragment extends Fragment {
         TextView textSlogan = (TextView) view.findViewById(R.id.textView5);
         textSlogan.setText(c.getBio().getCampaignSlogan());
 
-        ListView listView = (ListView) view.findViewById(R.id.list);
+        TextView school = (TextView) view.findViewById(R.id.schools);
+        StringBuffer schoolFormat = new StringBuffer("<h4>Academic Background</h4>");
+        String[] array = c.getCredential().getSchool().split(",");
+        for(int i=0; i<array.length; i++){
+            schoolFormat.append("&#149").append(array[i]).append("<br/>");
+        }
+        school.setText(Html.fromHtml(schoolFormat.toString()));
 
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View"
-        };
+        TextView pos = (TextView) view.findViewById(R.id.positions);
+        StringBuffer posFormat = new StringBuffer("<h4>Positions Held</h4>");
+        String[] arrayPos = c.getCredential().getPositions().split(",");
+        for(int i=0; i<arrayPos.length; i++){
+            posFormat.append("&#149").append(arrayPos[i]).append("<br/>");
+        }
+        pos.setText(Html.fromHtml(posFormat.toString()));
 
-        /*
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(),R.layout.linearLayout,values);
+        TextView bills = (TextView) view.findViewById(R.id.bills);
+        StringBuffer billsFormat = new StringBuffer("<h4>Bills Passed</h4>");
+        String[] arrayBill = c.getCredential().getBills().split("\n");
+        for(int i=0; i<arrayBill.length; i++){
+            billsFormat.append("&#149").append(arrayBill[i]).append("<br/>");
+        }
+        bills.setText(Html.fromHtml(billsFormat.toString()));
 
-        // Assign adapter to ListView
-        listView.setAdapter(adapter);
-        */
+        TextView awards = (TextView) view.findViewById(R.id.awards);
+        StringBuffer awardsFormat = new StringBuffer("<h4>Awards Received</h4>");
+        String[] arrayAward = c.getCredential().getAwards().split(",");
+        for(int i=0; i<arrayAward.length; i++){
+            awardsFormat.append("&#149").append(arrayAward[i]).append("<br/>");
+        }
+        awards.setText(Html.fromHtml(awardsFormat.toString()));
 
         return view;
     }
