@@ -29,11 +29,6 @@ public class BiographyActivity extends Activity {
         String candidateId = getIntent().getStringExtra("candidateId");
         Candidate c = CandidateListDao.getById(candidateId);
 
-        ImageView image = (ImageView) findViewById(R.id.imageView);
-        String uri = "@drawable/" + c.getPortrait(); //should have no extension
-        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
-        image.setBackgroundResource(imageResource);
-
         Biography bio = c.getBio();
 
         TextView textPoliticalname = (TextView) findViewById(R.id.textView2);
@@ -49,20 +44,5 @@ public class BiographyActivity extends Activity {
 
         TextView textSlogan = (TextView) findViewById(R.id.textView5);
         textSlogan.setText(bio.getCampaignSlogan());
-
-        Credential cred = c.getCredential();
-
-        ListView listView = (ListView) findViewById(R.id.list);
-
-        // Defined Array values to show in ListView
-
-        ArrayList<String> values = new ArrayList<>();
-        values.add(cred.getSchool());
-        values.add(cred.getPositions());
-        values.add(cred.getBills());
-        values.add(cred.getAwards());
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.credential_list,values.toArray(new String[values.size()]));
-        // Assign adapter to ListView
-        listView.setAdapter(adapter);
     }
 }
