@@ -1,5 +1,6 @@
 package com.cloudsherpas.kandidatos.profile;
 
+import android.graphics.Color;
 import android.util.Log;
 
 import com.github.mikephil.charting.animation.Easing;
@@ -29,6 +30,8 @@ public class CandidateProfileChartService {
         chart.setWebAlpha(60);
         chart.getLegend().setEnabled(false);
         chart.setRotationEnabled(false);
+        chart.setWebColor(Color.BLUE);
+        chart.setWebColorInner(Color.WHITE);
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setTextSize(9f);
@@ -68,7 +71,7 @@ public class CandidateProfileChartService {
         dataSetArrayList.add(new Entry(7f, 7));
 
         RadarDataSet set1 = new RadarDataSet(dataSetArrayList, "Candidate");
-        set1.setColor(ColorTemplate.VORDIPLOM_COLORS[0]);
+        set1.setColor(Color.YELLOW);
         set1.setDrawFilled(true);
         set1.setLineWidth(2f);
 

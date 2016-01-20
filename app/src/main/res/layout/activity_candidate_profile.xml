@@ -7,7 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:background="#B0BEC5"
+        android:background="#E8EAF6"
         tools:context="com.cloudsherpas.kandidatos.profile.CandidateProfileActivity">
 
         <FrameLayout
