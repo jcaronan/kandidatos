@@ -38,12 +38,12 @@ public class CandidateProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_profile);
 
+        Intent intent = getIntent();
+        final String candidateId = intent.getExtras().getString("CandidateID");
+
         mChart = (RadarChart) findViewById(R.id.profileChart);
         CandidateProfileChartService service = new CandidateProfileChartService();
         service.setupRadarChart(mChart);
-
-        Intent intent = getIntent();
-        final String candidateId = intent.getExtras().getString("CandidateID");
 
         /*LinearLayout profile = (LinearLayout) findViewById (R.id.linearLayout);
         profile.setOnClickListener(new View.OnClickListener() {
