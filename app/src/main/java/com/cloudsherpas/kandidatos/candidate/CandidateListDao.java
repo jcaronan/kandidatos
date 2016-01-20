@@ -23,35 +23,35 @@ public class CandidateListDao {
                 new Credential("","","","")
         ));
 
-        candidates.add(new Candidate("1", "tile_poe",
+        candidates.add(new Candidate("2", "tile_poe",
                 new Biography("Grace Poe", "Grace", "", "Poe", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
                 new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
                         "","","","","", "", ""),
                 new Credential("","","","")
         ));
 
-        candidates.add(new Candidate("1", "tile_binay",
+        candidates.add(new Candidate("3", "tile_binay",
                 new Biography("Jejomar Binay", "Jejomar", "", "Binay", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
                 new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
                         "","","","","", "", ""),
                 new Credential("","","","")
         ));
 
-        candidates.add(new Candidate("1", "tile_santiago",
+        candidates.add(new Candidate("4", "tile_santiago",
                 new Biography("Miriam Defensor-Santiago", "Miriam", "", "Santiago", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
                 new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
                         "","","","","", "", ""),
                 new Credential("","","","")
         ));
 
-        candidates.add(new Candidate("1", "tile_duterte",
+        candidates.add(new Candidate("5", "tile_duterte",
                 new Biography("Rodrigo Duterte", "Rodrigo", "", "Duterte", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
                 new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
                         "","","","","", "", ""),
                 new Credential("","","","")
         ));
 
-        candidates.add(new Candidate("1", "tile_seneres",
+        candidates.add(new Candidate("6", "tile_seneres",
                 new Biography("Roy Seneres", "Roy", "", "Seneres", "May 13, 1957", "Liberal Party", "\"Itutuloy ang daang matuwid\"."),
                 new Accomplishment("MAR intensified his commitment to quality education through the Personal Computers for Public Schools (PCPS) Program, which distributed over 30,000 computers to 2,000 public high schools all over the country. PCPS computers provided some 500,000 high school students with the necessary ICT tools and skills.",
                         "","","","","", "", ""),

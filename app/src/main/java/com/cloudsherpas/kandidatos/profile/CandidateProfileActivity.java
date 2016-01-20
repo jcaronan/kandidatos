@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.cloudsherpas.kandidatos.R;
 import com.cloudsherpas.kandidatos.accomplishment.Accomplishment;
@@ -30,6 +31,7 @@ public class CandidateProfileActivity extends AppCompatActivity {
 
     private RadarChart mChart;
     private ImageView iView;
+    private TextView tView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,24 +42,29 @@ public class CandidateProfileActivity extends AppCompatActivity {
         CandidateProfileChartService service = new CandidateProfileChartService();
         service.setupRadarChart(mChart);
 
-        //Left-hand image
-        iView = (ImageView) findViewById(R.id.imageView);
-        iView.setImageResource(R.drawable.mar_roxas);
-        //mChart.setBackgroundResource(R.drawable.mar_roxas);
-
         Intent intent = getIntent();
         final String candidateId = intent.getExtras().getString("CandidateID");
 
-        LinearLayout profile = (LinearLayout) findViewById (R.id.linearLayout);
+        /*LinearLayout profile = (LinearLayout) findViewById (R.id.linearLayout);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToBioPage(CandidateListDao.getById(candidateId));
             }
-        });
+        });*/
 
         //Setup Data Bindings here
         Candidate c = CandidateListDao.getById(candidateId);
+
+        //Profile image
+        iView = (ImageView) findViewById(R.id.profileImage);
+        String uri = "@drawable/" + c.getPortrait(); //should have no extension
+        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+        iView.setBackgroundResource(imageResource);
+
+        //Profile name
+        tView = (TextView) findViewById(R.id.candidateProfileName);
+        tView.setText(c.getBio().getFirstname()+ "\n" + c.getBio().getLastname());
     }
 
     @Override

@@ -1,40 +1,43 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:clipToPadding="false"
-    android:background="#B0BEC5"
-    tools:context="com.cloudsherpas.kandidatos.profile.CandidateProfileActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:elevation="2dp"
-        android:id="@+id/linearLayout"
-        android:background="#ffffff"
-        android:clickable="true">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_weight="3"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Mar Roxas"
-            android:id="@+id/candidateProfileName"
-            android:layout_weight="7"/>
-    </LinearLayout>
-
-    <com.github.mikephil.charting.charts.RadarChart
-        android:id="@+id/profileChart"
-        android:layout_width="match_parent"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="2dp"
-        android:layout_below="@+id/linearLayout"
-        android:background="#ffffff"
-        android:layout_marginTop="10dp" />
-</RelativeLayout>
+        android:clipToPadding="false"
+        android:background="#B0BEC5"
+        tools:context="com.cloudsherpas.kandidatos.profile.CandidateProfileActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:id="@+id/linearLayout"
+            android:background="#ffffff"
+            android:clickable="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/profileImage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_margin="10dp"
+                android:textColor="#ffffff"
+                android:id="@+id/candidateProfileName"/>
+        </FrameLayout>
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/profileChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:elevation="2dp"
+            android:layout_below="@+id/linearLayout"
+            android:background="#ffffff"
+            android:layout_marginTop="1dp" />
+    </RelativeLayout>
+</ScrollView>

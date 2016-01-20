@@ -80,7 +80,6 @@ public class CandidateListActivity extends AppCompatActivity {
 
             String uri = "@drawable/" + c.getPortrait(); //should have no extension
             int imageResource = getResources().getIdentifier(uri, null, getPackageName());
-            Drawable image = mContext.getDrawable(imageResource);
             imageButton.setBackgroundResource(imageResource);
 
             imageButton.setOnClickListener(new View.OnClickListener() {
