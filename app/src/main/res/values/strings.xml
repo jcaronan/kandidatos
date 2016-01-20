@@ -2,6 +2,7 @@
     <string name="app_name">kandidatos</string>
     <string name="title_activity_biography">BiographyActivity</string>
     <string name="title_activity_candidate_profile">Candidate Profile</string>
+    <string name="title_activity_candidate_list">List of Candidates</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -17,4 +18,5 @@
         \n&#8226;Nonummy nibh
         \n&#8226;Tincidunt
     </string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>
