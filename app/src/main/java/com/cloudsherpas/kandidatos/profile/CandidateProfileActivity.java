@@ -36,17 +36,27 @@ public class CandidateProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_profile);
 
+        Intent intent = getIntent();
+        final String candidateId = intent.getExtras().getString("CandidateID");
+
         mChart = (RadarChart) findViewById(R.id.profileChart);
         CandidateProfileChartService service = new CandidateProfileChartService();
         service.setupRadarChart(mChart);
 
         //Left-hand image
         iView = (ImageView) findViewById(R.id.imageView);
-        iView.setImageResource(R.drawable.mar_roxas);
+
+        switch(candidateId){
+            case "0":  iView.setImageResource(R.drawable.tile_roxas); break;
+            case "1":  iView.setImageResource(R.drawable.tile_poe); break;
+            case "2":  iView.setImageResource(R.drawable.tile_binay); break;
+            case "3":  iView.setImageResource(R.drawable.tile_santiago); break;
+            case "4":  iView.setImageResource(R.drawable.tile_duterte); break;
+            case "5":  iView.setImageResource(R.drawable.tile_seneres); break;
+        }
+
         //mChart.setBackgroundResource(R.drawable.mar_roxas);
 
-        Intent intent = getIntent();
-        final String candidateId = intent.getExtras().getString("CandidateID");
 
         LinearLayout profile = (LinearLayout) findViewById (R.id.linearLayout);
         profile.setOnClickListener(new View.OnClickListener() {

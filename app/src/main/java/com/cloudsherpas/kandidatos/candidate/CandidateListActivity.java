@@ -37,10 +37,9 @@ public class CandidateListActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position, long arg2) {
-                //ItemClicked item = adapter.getItem(position);
 
                 Intent intent = new Intent(CandidateListActivity.this, CandidateProfileActivity.class);
-                intent.putExtra("CandidateID", "1");
+                intent.putExtra("CandidateID", position);
                 //based on item add info to intent
                 startActivity(intent);
             }
