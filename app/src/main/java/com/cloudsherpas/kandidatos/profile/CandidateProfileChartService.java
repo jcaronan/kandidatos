@@ -15,6 +15,7 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by dong on 1/19/16.
@@ -61,14 +62,12 @@ public class CandidateProfileChartService {
         ArrayList<Entry> dataSetArrayList = new ArrayList<Entry>();
         //Mock Data
         //TODO: Parse real data
-        dataSetArrayList.add(new Entry(3f, 0));
-        dataSetArrayList.add(new Entry(10f, 1));
-        dataSetArrayList.add(new Entry(9f, 2));
-        dataSetArrayList.add(new Entry(1f, 3));
-        dataSetArrayList.add(new Entry(6f, 4));
-        dataSetArrayList.add(new Entry(4f, 5));
-        dataSetArrayList.add(new Entry(1f, 6));
-        dataSetArrayList.add(new Entry(7f, 7));
+        float minX = 0.0f;
+        float maxX = 10.0f;
+        Random rand = new Random();
+        for(int i = 0; i < 7; i++){
+            dataSetArrayList.add(new Entry(rand.nextFloat() * (maxX - minX) + minX, 0));
+        }
 
         RadarDataSet set1 = new RadarDataSet(dataSetArrayList, "Candidate");
         set1.setColor(Color.YELLOW);
