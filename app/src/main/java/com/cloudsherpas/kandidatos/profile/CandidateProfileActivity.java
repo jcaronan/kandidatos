@@ -52,9 +52,12 @@ public class CandidateProfileActivity extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               goToBioPage(CandidateListDao.getById(candidateId));
+                goToBioPage(CandidateListDao.getById(candidateId));
             }
         });
+
+        //Setup Data Bindings here
+        Candidate c = CandidateListDao.getById(candidateId);
     }
 
     @Override

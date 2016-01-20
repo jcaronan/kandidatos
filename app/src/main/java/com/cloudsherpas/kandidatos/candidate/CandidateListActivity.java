@@ -2,6 +2,10 @@ package com.cloudsherpas.kandidatos.candidate;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RippleDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,18 +38,6 @@ public class CandidateListActivity extends AppCompatActivity {
         GridView gridview = (GridView) findViewById(R.id.candidateGrid);
         CandidateListAdapter adapter = new CandidateListAdapter(this);
         gridview.setAdapter(adapter);
-
-        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position, long arg2) {
-                //ItemClicked item = adapter.getItem(position);
-
-                Intent intent = new Intent(CandidateListActivity.this, CandidateProfileActivity.class);
-                intent.putExtra("CandidateID", "1");
-                //based on item add info to intent
-                startActivity(intent);
-            }
-        });
     }
 
 
@@ -82,12 +75,23 @@ public class CandidateListActivity extends AppCompatActivity {
                 grid = (View)convertView;
             }
 
-            Candidate c = candidates[position];
+            final Candidate c = candidates[position];
+            ImageButton imageButton = (ImageButton)grid.findViewById(R.id.candidateListImage);
+
             String uri = "@drawable/" + c.getPortrait(); //should have no extension
             int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+            Drawable image = mContext.getDrawable(imageResource);
+            imageButton.setBackgroundResource(imageResource);
 
-            ImageView imageView = (ImageView)grid.findViewById(R.id.candidateListImage);
-            imageView.setImageResource(imageResource);
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CandidateListActivity.this, CandidateProfileActivity.class);
+                    intent.putExtra("CandidateID", c.getCandidateId());
+                    //based on item add info to intent
+                    startActivity(intent);
+                }
+            });
 
             TextView textView = (TextView)grid.findViewById(R.id.itemText);
             textView.setText(c.getBio().getLastname());

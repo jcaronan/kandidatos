@@ -3,11 +3,13 @@
     android:layout_width="match_parent" android:layout_height="160dp"
     android:padding="2dp">
 
-    <ImageView
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/candidateListImage"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/ripple"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
