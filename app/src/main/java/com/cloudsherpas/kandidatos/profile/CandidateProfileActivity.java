@@ -1,8 +1,14 @@
 package com.cloudsherpas.kandidatos.profile;
 
+import android.app.Fragment;
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.cloudsherpas.kandidatos.R;
@@ -36,7 +43,7 @@ public class CandidateProfileActivity extends AppCompatActivity {
     private TextView tView;
     private ListView listView;
     ArrayAdapter<String> adapter;
-
+    private String currentCandidateId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +51,13 @@ public class CandidateProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_candidate_profile);
 
         Intent intent = getIntent();
-        final String candidateId = intent.getExtras().getString("CandidateID");
+        this.currentCandidateId = intent.getExtras().getString("CandidateID");
 
+        /*
         mChart = (RadarChart) findViewById(R.id.profileChart);
         CandidateProfileChartService service = new CandidateProfileChartService();
         service.setupRadarChart(mChart);
+        */
 
         /*LinearLayout profile = (LinearLayout) findViewById (R.id.linearLayout);
         profile.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +68,8 @@ public class CandidateProfileActivity extends AppCompatActivity {
         });*/
 
         //Setup Data Bindings here
-        Candidate c = CandidateListDao.getById(candidateId);
+
+        Candidate c = CandidateListDao.getById(this.currentCandidateId);
 
         //Profile image
         iView = (ImageView) findViewById(R.id.profileImage);
@@ -87,6 +97,32 @@ public class CandidateProfileActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this,R.layout.credential_list,values.toArray(new String[values.size()]));
         // Assign adapter to ListView
         listView.setAdapter(adapter);
+        tView.setText(c.getBio().getFirstname() + "\n" + c.getBio().getLastname());
+
+        //Tabs
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("Biography"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        final ProfilePagerAdapter adapter = new ProfilePagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     @Override
@@ -116,5 +152,9 @@ public class CandidateProfileActivity extends AppCompatActivity {
         final Intent intent = new Intent(this, BiographyActivity.class);
         intent.putExtra("CANDIDATE", JsonUtil.toJson(candidate));
         startActivity(intent);
+    }
+
+    public String getCurrentCandidateId(){
+        return this.currentCandidateId;
     }
 }

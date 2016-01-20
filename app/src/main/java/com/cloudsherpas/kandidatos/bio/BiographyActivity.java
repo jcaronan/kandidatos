@@ -24,7 +24,7 @@ public class BiographyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_biography);
+        setContentView(R.layout.biography_fragment);
 
         String candidateId = getIntent().getStringExtra("candidateId");
         Candidate c = CandidateListDao.getById(candidateId);
