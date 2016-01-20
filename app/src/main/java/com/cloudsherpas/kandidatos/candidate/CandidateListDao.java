@@ -31,7 +31,7 @@ public class CandidateListDao {
                                 "RA 8748 - amending the Special Economic Zone Act by directly allocating to the municipality or city 2% (out of the 5%) gross tax to be collected from the establishments operating in the ecozone and providing for disturbance compensation for persons to be displaced or evicted by publicly-owned ecozones;\n" +
                                 "RA 8756 - incentivizing the establishment of regional headquarters to encourage investment and operation of multinational companies in the country and to generate more jobs.\n" +
                                 "RA 7880 - also known as the Roxas Law, which ensures fair distribution of the education capital budget among all the provinces.",
-                        "16th Lee Kuan Yew Fellow")
+                        "Sixteenth Lee Kuan Yew Fellow")
         ));
 
         candidates.add(new Candidate("1", "tile_poe",

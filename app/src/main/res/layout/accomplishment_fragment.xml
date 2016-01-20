@@ -43,11 +43,12 @@
             android:padding="5dp"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:text="@string/lorem_ipsum_list"
             android:background="#ffffff"
             android:gravity="left|top"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:id="@+id/education" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,11 +66,12 @@
             android:padding="5dp"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:text="@string/lorem_ipsum_list"
             android:background="#ffffff"
             android:gravity="left|top"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:id="@+id/agriculture" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,13 +86,129 @@
             android:text="National Security"
             android:background="#ffffff"
             android:gravity="left|top"
-            android:padding="5dp"/>
+            android:padding="5dp" />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:text="@string/lorem_ipsum_list"
             android:background="#ffffff"
             android:gravity="left|top"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:id="@+id/security" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Trade"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"
+            android:id="@+id/trade" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Foreign Affairs"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"
+            android:id="@+id/foreign" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Health"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"
+            android:id="@+id/health" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Labor"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"
+            android:id="@+id/labor" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Transportation"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_list"
+            android:background="#ffffff"
+            android:gravity="left|top"
+            android:padding="5dp"
+            android:id="@+id/transportation" />
     </LinearLayout>
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.cloudsherpas.kandidatos.accomplishment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,30 @@ public class AccomplishmentFragment extends Fragment {
         mChart = (RadarChart) view.findViewById(R.id.profileChart);
         CandidateProfileChartService service = new CandidateProfileChartService();
         service.setupRadarChart(mChart);
+
+        TextView educ = (TextView) view.findViewById(R.id.education);
+        educ.setText(c.getAccomplishment().getEducation());
+
+        TextView agri = (TextView) view.findViewById(R.id.agriculture);
+        agri.setText(c.getAccomplishment().getAgriculture());
+
+        TextView secu = (TextView) view.findViewById(R.id.security);
+        secu.setText(c.getAccomplishment().getSecurity());
+
+        TextView tr = (TextView) view.findViewById(R.id.trade);
+        tr.setText(c.getAccomplishment().getTrade());
+
+        TextView forn = (TextView) view.findViewById(R.id.foreign);
+        forn.setText(c.getAccomplishment().getForeignAffairs());
+
+        TextView health = (TextView) view.findViewById(R.id.health);
+        health.setText(c.getAccomplishment().getHealth());
+
+        TextView labor = (TextView) view.findViewById(R.id.labor);
+        labor.setText(c.getAccomplishment().getLabor());
+
+        TextView transpo = (TextView) view.findViewById(R.id.transportation);
+        transpo.setText(c.getAccomplishment().getTransportation());
 
         return view;
     }
